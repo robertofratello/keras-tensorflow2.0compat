@@ -11,4 +11,4 @@ If you want to replicate this with official keras, only change you have to do is
 
 You have to change on line 5 "import tensorflow as tf" with "import tensorflow.compat.v1" as tf, and then add the line "tf.disable_eager_execution()"
 
-Or just install this with pip install git+https://github.com/robertofratello/keras-tensorflow2.0compat/#egg=keras (assuming you have already tensorflow 2.0 installed).
+Or just install this with pip install git+https://github.com/robertofratello/keras-tensorflow2.0compat/#egg=keras (assuming you have already tensorflow 2.0 installed via pip install tensorflow or other ways).
