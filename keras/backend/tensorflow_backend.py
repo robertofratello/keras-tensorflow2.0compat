@@ -2,7 +2,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import tensorflow as tf
+import tensorflow.v1.compat as tf
+tf.disable_eager_execution()
 from tensorflow.python.framework import ops as tf_ops
 from tensorflow.python.training import moving_averages
 from tensorflow.python.ops import tensor_array_ops
