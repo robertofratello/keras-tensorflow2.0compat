@@ -1014,7 +1014,8 @@ class TensorBoard(Callback):
         super(TensorBoard, self).__init__()
         global tf, projector
         try:
-            import tensorflow as tf
+            import tensorflow.compat.v1 as tf:
+            tf.disable_eager_execution()
             from tensorflow.contrib.tensorboard.plugins import projector
         except ImportError:
             raise ImportError('You need the TensorFlow module installed to '
