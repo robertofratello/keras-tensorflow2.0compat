@@ -14,7 +14,8 @@ from .utils.generic_utils import deserialize_keras_object
 from .legacy import interfaces
 
 if K.backend() == 'tensorflow':
-    import tensorflow as tf
+    import tensorflow.compat.v1 as tf
+    tf.disable_eager_execution()
 
 
 def clip_norm(g, c, n):
